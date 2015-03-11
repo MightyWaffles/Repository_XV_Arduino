@@ -1,27 +1,27 @@
 
 
-int LEDPin, SwitchOutPin, SwitchInPin;
+int LEDPin, PVinPin, PVoutPin;
 //all pins are now in one place
 
 void setup() {
 // put your setup code here, to run once
   LEDPin = 13;
   //LED pin chain
-  SwitchInPin = 12;
+  PVinPin = 12;
   //input PVsensor
-  SwitchOutPin = 8;
+  PVoutPin = 8;
   //output PVSensor
   
-  pinMode(SwitchInPin, INPUT);
-  pinMode(SwitchOutPin, OUTPUT);
+  pinMode(PVinPin, INPUT);
+  pinMode(PVoutPin, OUTPUT);
   pinMode(LEDPin, OUTPUT);
   
-  digitalWrite(SwitchOutPin, HIGH);
+  digitalWrite(PVoutPin, HIGH);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (digitalRead(SwitchInPin) == HIGH) 
+  if (digitalRead(PVinPin) == HIGH) 
   {
     digitalWrite(LEDPin, HIGH);
   } 
