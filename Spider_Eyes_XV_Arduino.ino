@@ -9,7 +9,7 @@ void setup() {
   //LED pin chain
   SwitchInPin = 12;
   //input PVsensor
-  SwitchOutPin = 11;
+  SwitchOutPin = 8;
   //output PVSensor
   
   pinMode(SwitchInPin, INPUT);
